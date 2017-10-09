@@ -37,7 +37,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatGridListModule,
     GridModule,
-    RouterModule
+    RouterModule,
   ],
 
   entryComponents: [
