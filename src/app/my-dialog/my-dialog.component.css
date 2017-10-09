@@ -1,0 +1,11 @@
+.dialog-list{
+	list-style-type: none;
+
+}
+.dialog-list li{
+	float: left;
+}
+
+.clearfix{
+	clear: both;
+}
