@@ -8,6 +8,7 @@ import { MatDialogModule } from '@angular/material';
 import { PopupComponent } from './popup/popup.component';
 import { MyDialogComponent } from './my-dialog/my-dialog.component';
 import {MatGridListModule} from '@angular/material';
+import { GridModule } from '@progress/kendo-angular-grid';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {MatGridListModule} from '@angular/material';
     MatButtonModule,
     MatDialogModule,
     MatGridListModule,
-  
+    GridModule
   ],
 
   entryComponents: [
