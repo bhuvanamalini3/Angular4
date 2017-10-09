@@ -1,12 +1,16 @@
 
 <div style="text-align:center" class="main-class">
-  <h1>
-    {{title}}
-  </h1>
- <app-popup>
- 	
- </app-popup>
- <a routerLink="/routerexample" routerLinkActive="active">RoutingExample</a>
-<router-outlet></router-outlet>
-<!-- <button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();"><i class="fa fa-plus"></i> Add</button> -->
-
+    <mat-toolbar color="primary"><h2>{{title}}</h2></mat-toolbar>
+    <mat-toolbar-row color="primary">
+    	<mat-grid-list cols="5" rowHeight="2:1">
+		  <mat-grid-tile><a [routerLink]="['routerexamplesamepage']">ABOUT US</a></mat-grid-tile>
+		  <mat-grid-tile><a [routerLink]="['secondpage']">CONTACT US</a></mat-grid-tile>
+		  <mat-grid-tile><a [routerLink]="['login']">LOGIN</a></mat-grid-tile>
+		  <mat-grid-tile><a [routerLink]="['register']">REGISTER</a></mat-grid-tile>
+		  <mat-grid-tile><a [routerLink]="['/']">BACK</a></mat-grid-tile>
+		</mat-grid-list>
+    </mat-toolbar-row>
+	<!-- <app-popup>
+	 	
+	</app-popup> -->
+	<router-outlet></router-outlet>

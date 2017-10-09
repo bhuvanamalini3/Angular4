@@ -9,27 +9,26 @@ import { PopupComponent } from './popup/popup.component';
 import { MyDialogComponent } from './my-dialog/my-dialog.component';
 import {MatGridListModule} from '@angular/material';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponents, AppRoutes } from "./app.routing";
 import { RouterexampleComponent } from './routerexample/routerexample.component';
-
-const appRoutes: Routes = [
-  { path: 'routerexample', component: RouterexampleComponent },
-  ];
+import { SecondpageComponent } from './secondpage/secondpage.component';
+import {MatToolbarModule} from '@angular/material';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PopupComponent,
     MyDialogComponent,
-    RouterexampleComponent
+    RouterexampleComponent,
+    SecondpageComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
-
-     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purpose
-    ),
-
     BrowserAnimationsModule,
     BrowserModule,
     MatCardModule,
@@ -37,7 +36,10 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatGridListModule,
     GridModule,
+    HttpModule,
     RouterModule,
+    RouterModule.forRoot(AppRoutes),
+    MatToolbarModule
   ],
 
   entryComponents: [
