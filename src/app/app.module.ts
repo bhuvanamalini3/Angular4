@@ -16,8 +16,10 @@ import { RouterexampleComponent } from './routerexample/routerexample.component'
 import { SecondpageComponent } from './secondpage/secondpage.component';
 import {MatToolbarModule} from '@angular/material';
 import { LoginComponent } from './login/login.component';
+import {MatInputModule} from '@angular/material';
 import { RegisterComponent } from './register/register.component';
-
+import { RegisterpopupComponent } from './registerpopup/registerpopup.component';
+import { MyDialogRegisterComponent } from './my-dialog-register/my-dialog-register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { RegisterComponent } from './register/register.component';
     RouterexampleComponent,
     SecondpageComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegisterpopupComponent,
+    MyDialogRegisterComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -38,12 +42,13 @@ import { RegisterComponent } from './register/register.component';
     GridModule,
     HttpModule,
     RouterModule,
-    RouterModule.forRoot(AppRoutes),
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule,
+    RouterModule.forRoot(AppRoutes)
   ],
 
   entryComponents: [
-  	MyDialogComponent
+  	MyDialogComponent,MyDialogRegisterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

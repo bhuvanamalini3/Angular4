@@ -5,12 +5,11 @@
     	<mat-grid-list cols="5" rowHeight="2:1">
 		  <mat-grid-tile><a [routerLink]="['routerexamplesamepage']">ABOUT US</a></mat-grid-tile>
 		  <mat-grid-tile><a [routerLink]="['secondpage']">CONTACT US</a></mat-grid-tile>
-		  <mat-grid-tile><a [routerLink]="['login']">LOGIN</a></mat-grid-tile>
-		  <mat-grid-tile><a [routerLink]="['register']">REGISTER</a></mat-grid-tile>
+		  <!-- <mat-grid-tile><a [routerLink]="['login']">LOGIN</a></mat-grid-tile> -->
+		  <mat-grid-tile><app-popup></app-popup></mat-grid-tile>
+		  <mat-grid-tile><app-register></app-register></mat-grid-tile>
+		  <!-- <mat-grid-tile><a [routerLink]="['register']">REGISTER</a></mat-grid-tile> -->
 		  <mat-grid-tile><a [routerLink]="['/']">BACK</a></mat-grid-tile>
 		</mat-grid-list>
     </mat-toolbar-row>
-	<!-- <app-popup>
-	 	
-	</app-popup> -->
 	<router-outlet></router-outlet>
